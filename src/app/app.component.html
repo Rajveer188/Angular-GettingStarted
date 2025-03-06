@@ -1,6 +1,8 @@
 <div class="main-div">
   <h1>Hello {{userName}} from BridgeLabz</h1>
   <img [src]="imageURL" (click)="openWebsite($event)" alt="BridgeLabz logo">
-  <input class="input" type="text" [(ngModel)]="userName" placeholder="Enter name">
+  <input (input)="validateUsername($event)" class="input" type="text" [(ngModel)]="userName" placeholder="Enter name">
+  <span class="error-span">{{userNameError}}</span>
+  <span></span>
 </div>
 <router-outlet />
