@@ -1,5 +1,5 @@
 <div class="main-div">
   <h1>{{message}}</h1>
-  <img [src]="imageURL" alt="BridgeLabz logo">
+  <img [src]="imageURL" (click)="openWebsite($event)" alt="BridgeLabz logo">
 </div>
 <router-outlet />
